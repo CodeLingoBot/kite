@@ -13,7 +13,7 @@ type OnceEvery struct {
 	last     time.Time
 }
 
-// NewOnceEvery creates a new OnceEvery struct
+// New creates a new OnceEvery struct
 func New(d time.Duration) *OnceEvery {
 	return &OnceEvery{
 		Interval: d,

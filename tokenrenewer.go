@@ -106,7 +106,7 @@ func (t *TokenRenewer) renewLoop() {
 	}
 }
 
-// The duration from now to the time token needs to be renewed.
+// renewDuration; The duration from now to the time token needs to be renewed.
 // Needs to be calculated after renewing the token.
 func (t *TokenRenewer) renewDuration() time.Duration {
 	return t.validUntil.Add(-renewBefore).Sub(time.Now().UTC())

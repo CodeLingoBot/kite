@@ -75,7 +75,7 @@ func vm_stat() (bytesFree, bytesInactive uint64, err error) {
 	return pageSize * stats["pagesFree"].value, pageSize * stats["pagesInactive"].value, nil
 }
 
-// generic Sysctl buffer unmarshalling
+// sysctlbyname; generic Sysctl buffer unmarshalling
 func sysctlbyname(name string, data interface{}) (err error) {
 	val, err := syscall.Sysctl(name)
 	if err != nil {

@@ -16,7 +16,7 @@ type Node struct {
 	Node *etcd.Node
 }
 
-// New returns a new initialized node with the given etcd node.
+// NewNode; New returns a new initialized node with the given etcd node.
 func NewNode(node *etcd.Node) *Node {
 	return &Node{
 		Node: node,

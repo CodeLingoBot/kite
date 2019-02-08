@@ -52,7 +52,7 @@ func (k Kite) String() string {
 		"/" + k.ID
 }
 
-// Query() returns a pointer to KontrolQuery struct.
+// Query returns a pointer to KontrolQuery struct.
 func (k *Kite) Query() *KontrolQuery {
 	return &KontrolQuery{
 		Username:    k.Username,

@@ -360,7 +360,7 @@ func selectQuery(query *protocol.KontrolQuery) (string, []interface{}, error) {
 	return kites.Where(andQuery).ToSql()
 }
 
-// inseryKiteQuery inserts the given kite, url and key to the kite.kite table
+// insertKiteQuery inserts the given kite, url and key to the kite.kite table
 func insertKiteQuery(kiteProt *protocol.Kite, url, keyId string) (string, []interface{}, error) {
 	psql := sq.StatementBuilder.PlaceholderFormat(sq.Dollar)
 

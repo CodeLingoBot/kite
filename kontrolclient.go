@@ -138,7 +138,7 @@ func (k *Kite) GetKites(query *protocol.KontrolQuery) ([]*Client, error) {
 	return clients, nil
 }
 
-// used internally for GetKites() and WatchKites()
+// getKites; used internally for GetKites() and WatchKites()
 func (k *Kite) getKites(args protocol.GetKitesArgs) ([]*Client, error) {
 	<-k.kontrol.readyConnected
 

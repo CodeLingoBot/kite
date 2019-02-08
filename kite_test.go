@@ -226,7 +226,7 @@ func TestSendError(t *testing.T) {
 	}
 }
 
-// Call a single method with multiple clients. This test is implemented to be
+// TestConcurrency; Call a single method with multiple clients. This test is implemented to be
 // sure the method is calling back with in the same time and not timing out.
 func TestConcurrency(t *testing.T) {
 	// Create a mathworker kite
@@ -377,7 +377,7 @@ func TestNoConcurrentCallbacks(t *testing.T) {
 	}
 }
 
-// Test 2 way communication between kites.
+// TestKite tests 2 way communication between kites.
 func TestKite(t *testing.T) {
 	// Create a mathworker kite
 	mathKite := newXhrKite("mathworker", "0.0.1")
@@ -487,13 +487,13 @@ func TestKite(t *testing.T) {
 
 }
 
-// Sleeps for 2 seconds and returns true
+// Sleep; for 2 seconds and returns true
 func Sleep(r *Request) (interface{}, error) {
 	time.Sleep(time.Second * 2)
 	return true, nil
 }
 
-// Returns the result. Also tests reverse call.
+// Square returns the result. Also tests reverse call.
 func Square(r *Request) (interface{}, error) {
 	a := r.Args.One().MustFloat64()
 	result := a * a
@@ -518,7 +518,7 @@ func Sqrt(r *Request) (interface{}, error) {
 	return math.Sqrt(a), nil
 }
 
-// Calls the callback with the result. For testing requests with Callback.
+// SquareCB calls the callback with the result. For testing requests with Callback.
 func SquareCB(r *Request) (interface{}, error) {
 	args := r.Args.MustSliceOfLength(2)
 	a := args[0].MustFloat64()

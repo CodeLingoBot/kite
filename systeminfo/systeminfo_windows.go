@@ -38,7 +38,7 @@ func diskStats() (*disk, error) {
 	}, nil
 }
 
-// memoryStatus retrieves information about the system's current usage of
+// memoryStats retrieves information about the system's current usage of
 // physical memory.
 func memoryStats() (*memory, error) {
 	mstat := struct {

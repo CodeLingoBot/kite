@@ -66,7 +66,7 @@ type T struct {
 	E *T
 }
 
-// Combination of exported/unexported value/pointer receiver methods.
+// F1; Combination of exported/unexported value/pointer receiver methods.
 func (t T) F1(p *Partial)  {}
 func (t T) f2(p *Partial)  {}
 func (t *T) F3(p *Partial) {}

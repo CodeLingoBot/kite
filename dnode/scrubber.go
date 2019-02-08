@@ -12,7 +12,7 @@ type Scrubber struct {
 	callbacks  map[uint64]func(*Partial)
 }
 
-// New returns a pointer to a new Scrubber.
+// NewScrubber; New returns a pointer to a new Scrubber.
 func NewScrubber() *Scrubber {
 	return &Scrubber{
 		callbacks: make(map[uint64]func(*Partial)),

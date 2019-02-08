@@ -48,7 +48,7 @@ func (c *List) Run(_ []string) int {
 	return 0
 }
 
-// getIntalledKites returns installed kites in .kd/kites folder.
+// getInstalledKites returns installed kites in .kd/kites folder.
 // an empty argument returns all kites.
 func getInstalledKites(kiteName string) ([]*InstalledKite, error) {
 	kiteHome, err := kitekey.KiteHome()

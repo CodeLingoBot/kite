@@ -45,7 +45,7 @@ func RandomString(n int) string {
 	return hex.EncodeToString(p)[:n]
 }
 
-// RandomPort() returns a random port to be used with net.Listen(). It's an
+// RandomPort returns a random port to be used with net.Listen(). It's an
 // helper function to register to kontrol before binding to a port. Note that
 // this racy, there is a possibility that someoe binds to the port during the
 // time you get the port and someone else finds it. Therefore use in caution.

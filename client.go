@@ -251,7 +251,7 @@ func (c *Client) DialTimeout(timeout time.Duration) error {
 	return nil
 }
 
-// Dial connects to the remote Kite. If it can't connect, it retries
+// DialForever connects to the remote Kite. If it can't connect, it retries
 // indefinitely. It returns a channel to check if it's connected or not.
 func (c *Client) DialForever() (connected chan bool, err error) {
 	c.Reconnect = true
@@ -900,7 +900,7 @@ func (c *Client) setSession(session sockjs.Session) {
 	c.m.Unlock()
 }
 
-// Used to remove callbacks after error occurs in send().
+// removeCallbacks; Used to remove callbacks after error occurs in send().
 func (c *Client) removeCallbacks(callbacks map[string]dnode.Path) {
 	for sid := range callbacks {
 		// We don't check for error because we have created

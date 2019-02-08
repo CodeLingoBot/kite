@@ -33,7 +33,7 @@ func (k *Kontrol) cancelWatcher(watcherID string) error {
 	return nil
 }
 
-// TODO watchAndSendKiteEvents takes too many arguments. Refactor it.
+// watchAndSendKiteEvents; TODO watchAndSendKiteEvents takes too many arguments. Refactor it.
 func (k *Kontrol) watchAndSendKiteEvents(
 	watcher *Watcher,
 	watcherID string,

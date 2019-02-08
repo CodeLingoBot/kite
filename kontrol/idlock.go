@@ -7,7 +7,7 @@ type IdLock struct {
 	locksMu sync.Mutex
 }
 
-// New returns a new IdLock
+// NewIdlock; New returns a new IdLock
 func NewIdlock() *IdLock {
 	return &IdLock{
 		locks: make(map[string]sync.Locker),

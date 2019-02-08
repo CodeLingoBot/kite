@@ -122,13 +122,13 @@ func (m *Method) Throttle(fillInterval time.Duration, capacity int64) *Method {
 	return m
 }
 
-// PreHandler adds a new kite handler which is executed before the method.
+// PreHandle adds a new kite handler which is executed before the method.
 func (m *Method) PreHandle(handler Handler) *Method {
 	m.preHandlers = append(m.preHandlers, handler)
 	return m
 }
 
-// PreHandlerFunc adds a new kite handlerfunc which is executed before the
+// PreHandleFunc adds a new kite handlerfunc which is executed before the
 // method.
 func (m *Method) PreHandleFunc(handler HandlerFunc) *Method {
 	return m.PreHandle(handler)
@@ -140,7 +140,7 @@ func (m *Method) PostHandle(handler Handler) *Method {
 	return m
 }
 
-// PostHandlerFunc adds a new kite handlerfunc which is executed before the
+// PostHandleFunc adds a new kite handlerfunc which is executed before the
 // method.
 func (m *Method) PostHandleFunc(handler HandlerFunc) *Method {
 	return m.PostHandle(handler)
